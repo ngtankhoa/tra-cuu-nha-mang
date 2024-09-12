@@ -1,4 +1,6 @@
 import { DevicePhoneMobileIcon } from '@heroicons/react/24/outline'
+import { networks } from './lib/data'
+import NetworkCard from './ui/network-card'
 
 export default function Home() {
   return (
@@ -23,6 +25,11 @@ export default function Home() {
             />
             <DevicePhoneMobileIcon className='pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900' />
           </div>
+        </section>
+        <section>
+          {networks.map((network, id) => (
+            <NetworkCard network={network} key={id} />
+          ))}
         </section>
         <section className='py-4'>
           <h2>Danh sách các nhà mạng tại Việt Nam</h2>
