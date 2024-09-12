@@ -4,10 +4,10 @@
 // However, these types are generated automatically if you're using an ORM such as Prisma.
 
 export type Network = {
-  name: string
-  description: string
-  logo?: string
-  prefixes: string[]
-  status: 'Active' | 'Closed'
-  isVirtual?: boolean
-}
+  name: string;
+  description: string;
+  logo?: string;
+  prefixes: string[];
+  status: 'Active' | 'Closed';
+  isVirtual?: boolean;
+};
