@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <div className='grid min-h-screen grid-rows-[auto_1fr_20px] items-center justify-items-center font-[family-name:var(--font-geist-sans)]'>
       <main>
-        <section className='py-4 text-center'>
+        <section className='px-3 py-4 text-center'>
           <h1 className='text-xl'>Số điện thoại của bạn thuộc nhà mạng nào?</h1>
           <h2 className='text-xl'>hãy kiểm tra ở đây</h2>
         </section>
         <section className='px-3 py-4'>
           <label
-            className='mb-3 mt-5 block font-medium text-gray-900'
+            className='mb-3 block text-lg font-medium text-gray-900'
             htmlFor='phone'
           >
             Số điện thoại:
