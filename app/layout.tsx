@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      {/* <head>
+      <head>
         <link
           rel='apple-touch-icon'
           sizes='180x180'
@@ -47,7 +47,7 @@ export default function RootLayout({
         <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff' />
-      </head> */}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
