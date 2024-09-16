@@ -6,7 +6,11 @@ import { subscribeUser, unsubscribeUser, sendNotification } from './actions';
 import { DevicePhoneMobileIcon } from '@heroicons/react/24/outline';
 import { networks } from './lib/data';
 import NetworkCard from './ui/network-card';
+import clsx from 'clsx';
 
+const buttonClassname = clsx(
+  'border border-gray-800 px-2 py-1 active:bg-gray-200 transition-colors duration-75 rounded-md',
+);
 function urlBase64ToUint8Array(base64String: string) {
   console.log(base64String);
   const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
@@ -41,7 +45,7 @@ function InstallPrompt() {
   return (
     <div>
       <h3>Install App</h3>
-      <button className='border border-gray-800'>Add to Home Screen</button>
+      <button className={buttonClassname}>Add to Home Screen</button>
       {isIOS && (
         <p>
           To install this app on your iOS device, tap the share button
@@ -119,10 +123,7 @@ function PushNotificationManager() {
       {subscription ? (
         <>
           <p>You are subscribed to push notifications.</p>
-          <button
-            className='border border-gray-800'
-            onClick={unsubscribeFromPush}
-          >
+          <button className={buttonClassname} onClick={unsubscribeFromPush}>
             Unsubscribe
           </button>
           <input
@@ -131,17 +132,14 @@ function PushNotificationManager() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <button
-            className='border border-gray-800'
-            onClick={sendTestNotification}
-          >
+          <button className={buttonClassname} onClick={sendTestNotification}>
             Send Test
           </button>
         </>
       ) : (
         <>
           <p>You are not subscribed to push notifications.</p>
-          <button className='border border-gray-800' onClick={subscribeToPush}>
+          <button className={buttonClassname} onClick={subscribeToPush}>
             Subscribe
           </button>
         </>
