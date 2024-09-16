@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
+
+import withSerwistInit from '@serwist/next'
+
+const withSerwist = withSerwistInit({
+  swSrc: 'app/sw.ts',
+  swDest: 'public/sw.js',
+})
+
 const nextConfig = {
   async headers() {
     return [
@@ -40,4 +48,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+export default withSerwist(nextConfig)
