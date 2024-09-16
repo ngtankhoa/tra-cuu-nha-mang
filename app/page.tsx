@@ -45,7 +45,9 @@ function InstallPrompt() {
   return (
     <div>
       <h3>Install App</h3>
-      <button className={buttonClassname}>Add to Home Screen</button>
+      <button className={buttonClassname} onClick={() => console.log('abc')}>
+        Add to Home Screen
+      </button>
       {isIOS && (
         <p>
           To install this app on your iOS device, tap the share button
@@ -108,8 +110,10 @@ function PushNotificationManager() {
 
   async function sendTestNotification() {
     if (subscription) {
-      await sendNotification(message);
-      setMessage('');
+      setTimeout(async () => {
+        await sendNotification(message);
+        setMessage('');
+      }, 5000);
     }
   }
 

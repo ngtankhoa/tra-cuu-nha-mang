@@ -47,6 +47,7 @@ export async function sendNotification(message: string) {
       auth: globalThis.subscription.keys.auth,
     },
   };
+  console.log({ convertObject });
 
   try {
     await webpush.sendNotification(
