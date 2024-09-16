@@ -91,6 +91,7 @@ function PushNotificationManager() {
   }
 
   async function subscribeToPush() {
+    // trigger build
     try {
       const registration = await navigator.serviceWorker.ready;
       const sub = await registration.pushManager.subscribe({
