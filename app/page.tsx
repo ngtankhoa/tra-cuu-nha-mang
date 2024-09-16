@@ -91,15 +91,23 @@ function PushNotificationManager() {
   }
 
   async function subscribeToPush() {
-    const registration = await navigator.serviceWorker.ready;
-    const sub = await registration.pushManager.subscribe({
-      userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array(
-        process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
-      ),
-    });
-    setSubscription(sub);
-    await subscribeUser(sub.toJSON());
+    try {
+      const registration = await navigator.serviceWorker.ready;
+      const sub = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(
+          process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
+        ),
+      });
+      setSubscription(sub);
+      await subscribeUser(sub.toJSON());
+    } catch (error) {
+      console.error(error);
+      alert(
+        'Error subscribing to push notifications: ' +
+          JSON.stringify(error, null, 2),
+      );
+    }
   }
 
   async function unsubscribeFromPush() {
