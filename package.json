@@ -12,7 +12,8 @@
     "@heroicons/react": "^2.1.5",
     "next": "^14.2.11",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "web-push": "^3.6.7"
   },
   "devDependencies": {
     "@types/node": "^20",
