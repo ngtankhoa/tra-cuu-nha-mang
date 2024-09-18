@@ -30,5 +30,8 @@
     "serwist": "^9.0.7",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": "20.17.0"
   }
 }
