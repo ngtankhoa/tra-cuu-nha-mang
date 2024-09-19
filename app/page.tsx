@@ -2,7 +2,7 @@ import { DevicePhoneMobileIcon } from '@heroicons/react/24/outline';
 import { networks } from './lib/data';
 import NetworkCard from './ui/network-card';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className='grid min-h-screen grid-rows-[auto_1fr_20px] items-center justify-items-center font-[family-name:var(--font-geist-sans)]'>
       <main>

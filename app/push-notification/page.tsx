@@ -162,7 +162,7 @@ function PushNotificationManager() {
   );
 }
 
-export default function Home() {
+export default function PushNotificationPage() {
   return (
     <div className='grid min-h-screen grid-rows-[auto_1fr_20px] items-center justify-items-center font-[family-name:var(--font-geist-sans)]'>
       <main>
