@@ -78,6 +78,11 @@ export default function RootLayout({
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff' />
       </head> */}
+
+      {/* test for safari pinned tab (Mac OS X El Capitan Safari) */}
+      <head>
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
+      </head>
       <head />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
