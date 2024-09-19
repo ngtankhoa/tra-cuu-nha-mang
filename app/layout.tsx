@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       default: 'openGraph title tra cứu nhà mạng',
       template: 'openGraph title template tra cứu nhà mạng',
     },
-    description: '',
+    description: ' ',
   },
   twitter: {
     card: 'summary',
